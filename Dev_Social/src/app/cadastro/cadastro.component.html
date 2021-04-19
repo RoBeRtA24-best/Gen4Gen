@@ -1,0 +1,51 @@
+<div class="body">
+  <div class="registration-form">
+    <form [formGroup]="usuarioForm" class="needs-validation" novalidate (onSubmit)="onSubmit()">
+      <div class="form-icon">
+        <img src="devLogin.jpg" alt="pp" width="175">
+      </div>
+      <div class="form-group">
+      <form [formGroup]="uploadForm" class="needs-validation" novalidate>
+        <div class="custom-file">
+          <input type="file" class="form-control item" id="validatedCustomFile" required  formControlName="photo"
+          (change)="onSelectedFile($event.target.files)" >
+          <label for="validatedCustomFile">Upload your photo</label>
+        </div>
+      </form>
+    </div>
+      <div class="form-group">
+        <input type="text" class="form-control item" id="Name" placeholder="Name and Last name" formControlName="name"
+          [class.is-invalid]="exibeErro('name')">
+      </div>
+      <div class="form-group">
+        <input type="date" class="form-control item" id="date" placeholder="Birtday"
+          formControlName="birthday">
+      </div>
+      <!-- <div class="form-group"> -->
+      <select class="form-select item custom-select" formControlName="genderId"
+        [class.is-invalid]="exibeErro('genderId')">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let genero of generos" [ngValue]="genero.id"> {{genero.description}} </option>
+      </select>
+      <!-- </div> -->
+      <div class="form-group">
+        <input type="email" id="email" class="form-control item" placeholder="email" formControlName="email"
+          [class.is-invalid]="exibeErro('email')">
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" class="form-control item" placeholder="password" formControlName="password"
+          [class.is-invalid]="exibeErro('senha')">
+      </div>
+      <div class="form-group">
+        <input type="password" id="confirmPassword" class="form-control item" placeholder="Confirm your account"
+          [class.is-invalid]="exibeErro('senha')">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-block create-account" (click)="onSubmit()">Confirm</button>
+        <button type="button" class="btn btn-block item btn-danger" href="#">Cancel</button>
+      </div>
+    </form>
+    <div class="social-media">
+    </div>
+  </div>
+</div>

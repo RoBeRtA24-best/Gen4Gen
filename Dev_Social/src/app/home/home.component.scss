@@ -1,0 +1,50 @@
+.main {
+  background-image: url(devHome.jpg);
+  
+  background-size: 80%; /*background-size: cover;*/
+  height: 600px;
+  background-repeat: repeat;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main .titulo-destaque {
+  color: rgb(255, 174, 0);
+  margin-top: 10%;
+}
+
+.main .descricao {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.main .container {
+  width:40%;
+  box-shadow: 15px -15px 15px -15px rgba(255,210,190,0.6);
+}
+
+a{
+  padding: 10px 25px;
+	border-radius:25px;
+
+}
+
+.btn {
+  background-color: #003499;
+  border:#003499;
+  box-shadow: 15px 15px 15px 15px rgba(111,10,190,0.6);
+}
+
+.btn:hover{
+  background-color:#041944;
+  border:#041944;
+  box-shadow: 15px 15px 15px 15px rgba(111,10,190,0.6);
+}

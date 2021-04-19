@@ -1,0 +1,40 @@
+<div class="col-12" style="padding: 0;" *ngFor="let post of postagens">
+    <div class="box box-widget" >
+        <div class="box-header with-border" >
+            <div class="user-block"> <img class="img-circle" src={{post.photoUser}} alt="User Image"> <span
+                    class="username"><a href="/perfil" data-abc="true">{{post.nameUser}}</a></span>
+                <span class="description">Public - {{post.postCreatedAt}}</span>
+            </div>
+            <div class="box-body">
+                <p>{{post.post}}</p>
+               <div *ngIf="post.photoPost != '' ">
+                    <img class="img-responsive pad" src={{post.photoPost}} alt="Photo">
+                </div>
+                <a (click)="curtir(post.id)" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                <span class="pull-right text-muted">{{post.quantityLikes}} - Likes</span>
+            </div>
+            <div class="box-footer box-comments">
+                <div class="box-comment" *ngFor="let comment of post.comments">
+                    <img class="img-circle img-sm" src={{comment.photoUser}} alt="User Image">
+                    <div class="comment-text"> 
+                        <span class="username"> {{comment.nameUser}} 
+                            <span class="text-muted pull-right">{{comment.commentCreatedAt}} </span>
+                         </span>
+                        {{comment.comment}} 
+                    </div>
+                </div>
+
+                <div class="box-footer">
+                    <form [formGroup]="commentForm" method="post" onsubmit="comentar(post.idPost)">
+                        <img class="img-responsive img-circle img-sm" src={{foto}} alt="Alt Text">
+                        <div class="img-push">
+                            <input type="text" class="form-control input-sm" placeholder="Digite seu comentário"
+                                formControlName="text">
+                        </div>
+                        <button type="submit" class="btn btn-primmary xs">Comments</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

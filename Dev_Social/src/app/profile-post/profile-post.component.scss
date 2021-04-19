@@ -1,0 +1,44 @@
+body {
+  background-color: #eeeeee;
+}
+
+.container-fluid {
+  padding-bottom: 50px;
+}
+
+.h7 {
+  font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+  margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+  .gedf-main {
+      padding-left: 4rem;
+      padding-right: 4rem;
+  }
+  .gedf-card {
+      margin-bottom: 2.77rem;
+  }
+}
+
+button {
+  background-color: #003499;
+ }
+
+ button:hover {
+  background-color: #062055;
+ }
+
+ .perfilNomeClick {
+  text-decoration: none;
+}
+
+/**Reset Bootstrap*/
+.dropdown-toggle::after {
+  content: none;
+  display: none;
+}
+
