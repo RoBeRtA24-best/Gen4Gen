@@ -1,0 +1,66 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <!--<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="favicon.ico" width="50" height="50" alt="">
+    </a>
+ </nav>-->
+<div class="container-fluid">
+  <div class="container-fluid gedf-wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="h5">
+              <div class="mr-2">
+                <img class="rounded-circle" width="80" height="80" src={{foto}} alt="">
+              </div>
+                  <h4><a class="perfilNomeClick" href="/perfil">{{usuario}}</a></h4>
+              </div>
+            <div class="h7 text-muted">
+              <h6>{{email}}</h6>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Tasks
+              <p>Jobs</p>
+            </li>
+            <li class="list-group-item">
+              <h6 class="card-title">Find a taks</h6><!--AI Busca por perfil inventor, artista ou empreendedor-->
+              <h6 class="card-subtitle mb-2 text-muted">Goals</h6><br>
+              <div class="input-group mb-2">
+                <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search"
+                  aria-describedby="search-addon" />
+                <button type="button" id="btnPesquisar" class="btn btn-primary">Research</button>
+              </div>
+         <!--   <button href="#" class="btn btn-primary card-link">Adicionar</button>-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 gedf-main" style="margin-bottom: 20px;">
+        <app-caixa-postagem></app-caixa-postagem>
+        <app-time-line></app-time-line>
+      </div>
+      <div class="col-md-3">
+        <div class="card gedf-card">
+          <div class="card-body">
+            <h5 class="card-title">My Projects</h5>
+            <h6 class="card-subtitle mb-2 text-muted">My photos</h6>
+            <button href="#" class="btn btn-primary card-link">Access my Projects</button>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+
